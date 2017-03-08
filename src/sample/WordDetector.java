@@ -1,3 +1,11 @@
+/*
+ *  Name: Betty Kwong
+ *  ID:   100587230
+ *  Due:  March 7, 2017
+ *
+ *  WordDetector.java
+ */
+
 package sample;
 
 import java.io.*;
@@ -29,6 +37,7 @@ public class WordDetector {
         }
     }
 
+    //counts word
     private void countWord(String word) {
         if (wordCounts.containsKey(word)) {
             int oldCount = wordCounts.get(word);
@@ -38,6 +47,7 @@ public class WordDetector {
         }
     }
 
+    //determines if key is a word
     private boolean isWord(String str){
         String pattern = "^[a-zA-Z]*$";
         if (str.matches(pattern)){
@@ -46,6 +56,7 @@ public class WordDetector {
         return false;
     }
 
+    //printing word count
     public void printWordCounts(int minCount, File outputFile) throws FileNotFoundException {
         System.out.println("Saving word counts to " + outputFile.getAbsolutePath());
         if (!outputFile.exists() || outputFile.canWrite()) {
@@ -69,6 +80,8 @@ public class WordDetector {
         }
     }
 
+
+    //calculates the probability
     public void frequency(String ham, String spam, WordDetector hamcounter, WordDetector spamcounter){
         Set<String> keys = wordCounts.keySet();
         Iterator<String> keyIterator = keys.iterator();

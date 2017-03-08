@@ -1,3 +1,12 @@
+/*
+ *  Name: Betty Kwong
+ *  ID:   100587230
+ *  Due:  March 7, 2017
+ *
+ *  TestFile.java
+ *  This code was from the pdf file for the instructions.
+ */
+
 package sample;
 
 import java.text.DecimalFormat;
